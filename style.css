@@ -11,6 +11,10 @@ ul {
   list-style: none;
 }
 
+.container {
+  display: flex;
+}
+
 .container .container-menu{
   background: black;
   padding: 20px 0;
@@ -43,4 +47,66 @@ ul {
 
 .container .container-menu .menu-settings svg {
   margin-right: 10px;
+}
+
+.container .content {
+  background: #f5f6fa;
+  width: 100%;
+}
+
+.container .content .card-header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container .content .card-header .card {
+  background: #FFFFFF;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  margin: 0 20px;
+  display: flex;
+  height: 132px;
+}
+
+.container .content .card-header .card-small {
+  width: 240px;
+  display: flex;
+  align-items: center;
+}
+
+.container .content .card-header .card-large {
+  width: 464px;
+}
+
+.container .content .card-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+}
+
+.container .content .card-content .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .content .card-content .card-info h2 {
+  font-size: 54px;
+  font-weight: 700;
+  color: #FFBA33;
+}
+
+.container .content .card .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container .content .card-header .card-large .card-container .card-content:first-child {
+  border-right: 1px solid #111;
 }
