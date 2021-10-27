@@ -110,3 +110,36 @@ ul {
 .container .content .card-header .card-large .card-container .card-content:first-child {
   border-right: 1px solid #111;
 }
+
+.container .table {
+  margin: 40px;
+  width: 642px;
+  padding: 30px;
+  background: #FFFFFF;
+  color:#5E5E5E;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  text-align: left;
+}
+
+.container .table h5 {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.container .table #filmsTable {
+  width: 100%;
+  margin-top:20px;
+}
+
+.container .table #filmsTable thead tr th {
+  border-bottom: 1px solid #5E5E5E;
+  padding: 10px 0;
+}
+
+.container .table #filmsTable tr td {
+  border-bottom: 1px solid #E9E9E9;
+  padding: 10px 0;
+}
