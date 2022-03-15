@@ -1,10 +1,35 @@
 const personagensContador = document.getElementById('personagens');
-const luasContador = document.getElementById('luas');
+const luasContador = document.getElementById('veiculos');
 const planetasContador = document.getElementById('planetas');
 const navesContador = document.getElementById('naves');
 
 preencherContadores();
 preencherTabela();
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(desenharGrafico);
+
+  async function desenharGrafico() {
+    const response = await swapiGet('vehicles/');
+    const vehiclesArray = response.data.results;
+
+    const dataArray = [];
+    dataArray.push(['vehicles', 'passengers']);
+    vehiclesArray.forEach((vehicle) => {
+      dataArray.push([vehicle.name, +vehicle.passengers])
+    })
+
+    var data = google.visualization.arrayToDataTable(dataArray);
+
+    var options = {
+      title: 'Maiores Veículos',
+      legend: 'none',
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  }
+
 
 function preencherContadores() {
     Promise.all([
@@ -22,8 +47,7 @@ function preencherContadores() {
 async function preencherTabela () {
  const response = await swapiGet('films/');
  const tableData = response.data.results;
- console.log(tableData);
- 
+
  tableData.forEach(film => {
 
   $('#filmsTable').append(
