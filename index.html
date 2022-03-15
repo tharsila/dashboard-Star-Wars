@@ -28,7 +28,7 @@
   
             <li>
               <img src="assets/planetas.svg" alt="">
-              <p>Planetas e luas</p>
+              <p>Veículos e planetas</p>
             </li>
   
             <li>
@@ -64,10 +64,10 @@
   
               <div class="card-content">
                 <div class="card-info">
-                  <p>Luas</p>
-                  <h2 id = "luas">-</h2>
+                  <p>Veículos</p>
+                  <h2 id = "veiculos">-</h2>
                 </div>
-                <img src="assets/luas-black.svg" alt="">
+                <img src="assets/veiculos-black.svg" alt="">
               </div>
             
               <div class="card-content">
@@ -93,28 +93,35 @@
 
         </div>
 
-        <div class="table">
-          <h5>Últimos filmes</h5>
-          <p>Saiba os últimos lançamentos da marca</p>
-          <table id="filmsTable">
-            <thead>
-              <tr>
-                <th>Título</th>
-                <th>Estréia</th>
-                <th>Diretor</th>
-                <th>Episódios</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+        <div class="content-info">
+          <div class="table">
+            <h5>Últimos filmes</h5>
+            <p>Saiba os últimos lançamentos da marca</p>
+            <table id="filmsTable">
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Estréia</th>
+                  <th>Diretor</th>
+                  <th>Episódios</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+  
+          <div class="chart">
+            <div id="piechart" style="width: 600px; height: 400px;"></div>
+          </div>
         </div>
-
       </div>
     </div>
 
   <script>
     feather.replace()
   </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
